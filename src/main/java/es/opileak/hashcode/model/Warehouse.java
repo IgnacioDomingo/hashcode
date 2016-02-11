@@ -22,4 +22,9 @@ public class Warehouse {
 	public void setProductsQuantity(Map<Product, Integer> productsQuantity) {
 		this.productsQuantity = productsQuantity;
 	}
+
+	@Override
+	public String toString() {
+		return "Warehouse [position=" + position + ", productsQuantity=" + productsQuantity + "]";
+	}
 }

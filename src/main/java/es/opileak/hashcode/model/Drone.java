@@ -33,4 +33,9 @@ public class Drone {
 		this.turno = turno;
 	}
 
+	@Override
+	public String toString() {
+		return "Drone [position=" + position + ", lstProduct=" + lstProduct + ", turno=" + turno + "]";
+	}
+
 }
