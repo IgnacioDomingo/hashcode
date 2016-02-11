@@ -7,6 +7,11 @@ public class Command {
 		return 0;
 	}
 
+	public String getCommandType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	public int getProcutId() {
 		// TODO Auto-generated method stub
 		return 0;
