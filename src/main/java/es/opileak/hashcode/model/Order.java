@@ -24,4 +24,9 @@ public class Order {
 		this.productsQuantity = productsQuantity;
 	}
 
+	@Override
+	public String toString() {
+		return "Order [position=" + position + ", productsQuantity=" + productsQuantity + "]";
+	}
+
 }

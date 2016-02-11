@@ -33,4 +33,9 @@ public class Command {
 		this.lstCommand = lstCommand;
 	}
 
+	@Override
+	public String toString() {
+		return "Command [posicion=" + posicion + ", orden=" + orden + ", lstCommand=" + lstCommand + "]";
+	}
+
 }

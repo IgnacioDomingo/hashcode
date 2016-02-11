@@ -32,4 +32,9 @@ public class Candidate {
 		this.score = score;
 	}
 
+	@Override
+	public String toString() {
+		return "Candidate [lstCommands=" + lstCommands + ", turns=" + turns + ", score=" + score + "]";
+	}
+
 }
