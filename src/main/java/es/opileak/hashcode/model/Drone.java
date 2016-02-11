@@ -1,6 +1,8 @@
 package es.opileak.hashcode.model;
 
+import java.awt.Point;
 import java.awt.geom.Point2D;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Drone {
@@ -8,6 +10,13 @@ public class Drone {
 	Point2D			position;
 	List<Product>	lstProduct;
 	Integer			turno;
+
+	public Drone() {
+		super();
+		this.position = new Point(0, 0);
+		this.lstProduct = new LinkedList<>();
+		this.turno = 0;
+	}
 
 	public Point2D getPosition() {
 		return position;
