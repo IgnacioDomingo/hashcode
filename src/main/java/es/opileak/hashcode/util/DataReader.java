@@ -12,6 +12,9 @@ import es.opileak.hashcode.model.Order;
 import es.opileak.hashcode.model.ProblemState;
 import es.opileak.hashcode.model.Product;
 import es.opileak.hashcode.model.Warehouse;
+import es.opileak.hashcode.services.DroneService;
+import es.opileak.hashcode.services.OrderService;
+import es.opileak.hashcode.services.WarehouseService;
 
 public class DataReader {
 	public static ProblemState readFile(String path) throws IOException {
@@ -68,6 +71,12 @@ public class DataReader {
 			orderList.add(new Order(pos, productsQuantity));
 			lineIndex += 3;
 		}
-		return null;
+
+		DroneService droneService = new DroneService(droneNumber, turnNumber, maxPayload);
+		WarehouseService warehouseService = new WarehouseService(warehouseList);
+		OrderService orderService = new OrderService(orderList);
+		ProblemState problemState = new ProblemState(droneService, orderService, warehouseService);
+
+		return problemState;
 	}
 }
