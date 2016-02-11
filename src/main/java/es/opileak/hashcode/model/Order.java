@@ -5,6 +5,12 @@ import java.util.Map;
 
 public class Order {
 
+	public Order(Point2D position, Map<Product, Integer> productsQuantity) {
+		super();
+		this.position = position;
+		this.productsQuantity = productsQuantity;
+	}
+
 	private Point2D					position;
 	private Map<Product, Integer>	productsQuantity;
 

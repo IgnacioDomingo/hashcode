@@ -2,6 +2,12 @@ package es.opileak.hashcode.model;
 
 public class Product {
 
+	public Product(Integer id, Integer peso) {
+		super();
+		this.id = id;
+		this.peso = peso;
+	}
+
 	Integer	id;
 	Integer	peso;
 

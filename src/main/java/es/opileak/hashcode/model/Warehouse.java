@@ -4,6 +4,12 @@ import java.awt.geom.Point2D;
 import java.util.Map;
 
 public class Warehouse {
+	public Warehouse(Point2D position, Map<Product, Integer> productsQuantity) {
+		super();
+		this.position = position;
+		this.productsQuantity = productsQuantity;
+	}
+
 	private Point2D					position;
 	private Map<Product, Integer>	productsQuantity;
 
