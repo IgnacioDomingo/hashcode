@@ -20,7 +20,7 @@ public class OrderService {
 	}
 
 	public void update(Candidate operationCandidate) {
-		listOrder.remove(operationCandidate.getOrder());
+		listOrder.remove(operationCandidate.getClosedOrder());
 		orderRestantes--;
 	}
 

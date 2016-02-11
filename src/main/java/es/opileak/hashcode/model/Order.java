@@ -1,12 +1,19 @@
 package es.opileak.hashcode.model;
 
 import java.awt.geom.Point2D;
+import java.util.Map;
 
 public class Order {
 
 	private int					id;
 	private Point2D				clientPosition;
 	private ProductsQuantity	productsQuantity;
+
+	public Order(Point2D clientPosition, Map<Product, Integer> productsQuantity) {
+		super();
+		this.clientPosition = clientPosition;
+		this.productsQuantity = productsQuantity;
+	}
 
 	public Point2D getPosition() {
 		return clientPosition;

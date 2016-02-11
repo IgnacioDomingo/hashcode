@@ -17,6 +17,7 @@ public class FileUtilsTest {
 		Files.deleteIfExists(path);
 		String textToWrite = "hola";
 		FileUtils.writeFile(path, textToWrite);
+
 		String readBody = FileUtils.readWholeFile(path);
 		assertTrue(textToWrite.equals(readBody));
 		Files.deleteIfExists(path);
