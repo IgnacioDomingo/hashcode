@@ -31,7 +31,6 @@ public class DroneService {
 			drone.applyCommand(command);
 			turnosTotalesRestantes -= command.getTurnConsumed();
 		}
-
 	}
 
 }

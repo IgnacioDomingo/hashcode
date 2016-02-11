@@ -5,14 +5,12 @@ import java.util.Map;
 
 public class Order {
 
-	private int					id;
-	private Point2D				clientPosition;
-	private ProductsQuantity	productsQuantity;
+	private int		id;
+	private Point2D	clientPosition;
 
 	public Order(Point2D clientPosition, Map<Product, Integer> productsQuantity) {
 		super();
 		this.clientPosition = clientPosition;
-		this.productsQuantity = productsQuantity;
 	}
 
 	public Point2D getPosition() {
@@ -21,11 +19,6 @@ public class Order {
 
 	public void setPosition(Point2D position) {
 		this.clientPosition = position;
-	}
-
-	@Override
-	public String toString() {
-		return "Order [position=" + clientPosition + ", productsQuantity=" + productsQuantity + "]";
 	}
 
 	public int getId() {
@@ -58,10 +51,6 @@ public class Order {
 		if (id != other.id)
 			return false;
 		return true;
-	}
-
-	private class ProductsQuantity {
-
 	}
 
 }

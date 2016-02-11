@@ -13,7 +13,6 @@ public class WarehouseService {
 	}
 
 	public void update(Candidate operationCandidate) {
-		// TODO Auto-generated method stub
 
 	}
 
