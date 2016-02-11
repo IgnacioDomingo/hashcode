@@ -1,41 +1,29 @@
 package es.opileak.hashcode.model;
 
-import java.awt.geom.Point2D;
-import java.util.List;
-
 public class Command {
 
-	Point2D			posicion;
-	Order			orden;
-	List<Command>	lstCommand;
-
-	public Point2D getPosicion() {
-		return posicion;
+	public int getWarehouseId() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
-	public void setPosicion(Point2D posicion) {
-		this.posicion = posicion;
+	public int getProcutId() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
-	public Order getOrden() {
-		return orden;
+	public int getDroneId() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
-	public void setOrden(Order orden) {
-		this.orden = orden;
+	public int getTurnConsumed() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
-	public List<Command> getLstCommand() {
-		return lstCommand;
+	public int getProcutConsumed() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
-
-	public void setLstCommand(List<Command> lstCommand) {
-		this.lstCommand = lstCommand;
-	}
-
-	@Override
-	public String toString() {
-		return "Command [posicion=" + posicion + ", orden=" + orden + ", lstCommand=" + lstCommand + "]";
-	}
-
 }

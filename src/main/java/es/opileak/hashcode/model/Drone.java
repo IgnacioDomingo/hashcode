@@ -47,4 +47,9 @@ public class Drone {
 		return "Drone [position=" + position + ", lstProduct=" + lstProduct + ", turno=" + turno + "]";
 	}
 
+	public void consumeTurn(int turnConsumed) {
+		// TODO Auto-generated method stub
+
+	}
+
 }
