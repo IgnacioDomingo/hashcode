@@ -25,6 +25,9 @@ public class SolutionWriter {
 
 		file = numberOfCommands + "\n";
 		for (Command command : lstCommand) {
+
+			//			TODO: Cambiar el tipo por un enum en el modelo y aquí!
+
 			//			Si es de tipo Load
 			if (command.getCommandType() == "L") {
 				file += command.getDroneId() + " " + command.getCommandType() + " " + command.getWarehouseId() + " " + command.getProcutId() + " " + command.getProcutConsumed() + "\n";
