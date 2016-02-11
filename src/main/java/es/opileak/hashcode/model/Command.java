@@ -14,6 +14,11 @@ public class Command {
 		return null;
 	}
 
+	public String getOrderId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	public int getProcutId() {
 		// TODO Auto-generated method stub
 		return 0;
