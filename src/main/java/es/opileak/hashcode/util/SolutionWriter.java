@@ -15,13 +15,24 @@ public class SolutionWriter {
 		this.solution = solution;
 	}
 
-	public void writeSolutionToFile(Solution solution) {
+	public void writeSolutionToFile() {
 
 		List<Command> lstCommand = solution.getLstCommand();
 
 		String file = new String();
+
+		Integer numberOfCommands = solution.getLstCommand().size() + 1;
+
+		file = numberOfCommands + "\n";
 		for (Command command : lstCommand) {
-			file += command.getDroneId() + " " + command.getCommandType() + " " + command.getWarehouseId() + " " + command.getProcutId() + " " + command.getProcutConsumed() + "\n";
+			//			Si es de tipo Load
+			if (command.getCommandType() == "L") {
+				file += command.getDroneId() + " " + command.getCommandType() + " " + command.getWarehouseId() + " " + command.getProcutId() + " " + command.getProcutConsumed() + "\n";
+			}
+			//			Si es de tipo Deliver
+			if (command.getCommandType() == "D") {
+				file += command.getDroneId() + " " + command.getCommandType() + " " + command.getOrderId() + " " + command.getProcutId() + " " + command.getProcutConsumed() + "\n";
+			}
 		}
 
 		try {
