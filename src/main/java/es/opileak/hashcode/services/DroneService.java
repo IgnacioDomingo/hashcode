@@ -6,18 +6,11 @@ import es.opileak.hashcode.model.Drone;
 
 public class DroneService {
 
-	Drone[]		droneforId;
-	int			turnosTotalesRestantes;
-
-	final int	maxTurn;
-	final int	maxPayload;
-	final int	maxDroneNumber;
+	Drone[]	droneforId;
+	int		turnosTotalesRestantes;
 
 	public DroneService(int maxDroneNumber, int maxTurn, int maxPayload) {
 		super();
-		this.maxTurn = maxTurn;
-		this.maxPayload = maxPayload;
-		this.maxDroneNumber = maxDroneNumber;
 
 		turnosTotalesRestantes = maxTurn * maxDroneNumber;
 
@@ -35,7 +28,7 @@ public class DroneService {
 	public void update(Candidate operationCandidate) {
 		for (Command command : operationCandidate.getLstCommands()) {
 			Drone drone = droneforId[command.getDroneId()];
-			drone.consumeTurn(command.getTurnConsumed());
+			drone.applyCommand(command);
 			turnosTotalesRestantes -= command.getTurnConsumed();
 		}
 

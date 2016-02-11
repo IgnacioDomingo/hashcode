@@ -7,19 +7,21 @@ import es.opileak.hashcode.model.Order;
 
 public class OrderService {
 
+	List<Order>	listOrder;
+	int			orderRestantes;
+
 	public OrderService(List<Order> listOrder) {
 		super();
-		// TODO Auto-generated constructor stub
+		this.listOrder = listOrder;
 	}
 
 	public boolean hasAvailable() {
-		// TODO Auto-generated method stub
-		return false;
+		return orderRestantes == 0;
 	}
 
 	public void update(Candidate operationCandidate) {
-		// TODO Auto-generated method stub
-
+		listOrder.remove(operationCandidate.getOrder());
+		orderRestantes--;
 	}
 
 }

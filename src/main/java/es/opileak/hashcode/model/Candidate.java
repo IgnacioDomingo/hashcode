@@ -4,9 +4,9 @@ import java.util.List;
 
 public class Candidate {
 
-	List<Command>	lstCommands;
-	Integer			turns;
-	Integer			score;
+	private List<Command>	lstCommands;
+	private Integer			score;
+	private Order			closedOrder;
 
 	public List<Command> getLstCommands() {
 		return lstCommands;
@@ -14,14 +14,6 @@ public class Candidate {
 
 	public void setLstCommands(List<Command> lstCommands) {
 		this.lstCommands = lstCommands;
-	}
-
-	public Integer getTurns() {
-		return turns;
-	}
-
-	public void setTurns(Integer turns) {
-		this.turns = turns;
 	}
 
 	public Integer getScore() {
@@ -34,7 +26,11 @@ public class Candidate {
 
 	@Override
 	public String toString() {
-		return "Candidate [lstCommands=" + lstCommands + ", turns=" + turns + ", score=" + score + "]";
+		return "Candidate [lstCommands=" + lstCommands + ", score=" + score + "]";
+	}
+
+	public Order getClosedOrder() {
+		return closedOrder;
 	}
 
 }

@@ -2,36 +2,24 @@ package es.opileak.hashcode.model;
 
 import java.awt.Point;
 import java.awt.geom.Point2D;
-import java.util.LinkedList;
-import java.util.List;
 
 public class Drone {
 
-	Point2D			position;
-	List<Product>	lstProduct;
-	Integer			turno;
+	Point2D	actualPosition;
+	Integer	turno;
 
 	public Drone() {
 		super();
-		this.position = new Point(0, 0);
-		this.lstProduct = new LinkedList<>();
+		this.actualPosition = new Point(0, 0);
 		this.turno = 0;
 	}
 
 	public Point2D getPosition() {
-		return position;
+		return actualPosition;
 	}
 
 	public void setPosition(Point2D position) {
-		this.position = position;
-	}
-
-	public List<Product> getLstProduct() {
-		return lstProduct;
-	}
-
-	public void setLstProduct(List<Product> lstProduct) {
-		this.lstProduct = lstProduct;
+		this.actualPosition = position;
 	}
 
 	public Integer getTurno() {
@@ -44,12 +32,15 @@ public class Drone {
 
 	@Override
 	public String toString() {
-		return "Drone [position=" + position + ", lstProduct=" + lstProduct + ", turno=" + turno + "]";
+		return "Drone [position=" + actualPosition + ", turno=" + turno + "]";
 	}
 
-	public void consumeTurn(int turnConsumed) {
-		// TODO Auto-generated method stub
+	public void applyCommand(Command command) {
+		turno += command.getTurnConsumed();
 
+		if (command.getEndPosition() != null) {
+			actualPosition = command.getEndPosition();
+		}
 	}
 
 }
